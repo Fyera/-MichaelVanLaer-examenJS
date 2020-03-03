@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function berekenHoeveelheid() {
+            var geboortejaar = prompt("Wat is jouw geboortejaar?");
+            var levensduur = prompt("Hoe oud denk je te worden?");
+            var koffiePerDag = prompt("Hoeveel koppen koffie drink je per dag?");
+            var date = new Date();
+
+            var ouderdom = date.getFullYear() - geboortejaar;
+            var koffieForLife = (levensduur - ouderdom) * 365 * koffiePerDag;
+            document.write(
+                "Je bent nu " +
+                ouderdom +
+                ". Tegen " +
+                koffiePerDag +
+                " koppen koffie per dag zal je " +
+                koffieForLife +
+                " koppen koffie drinken als je " +
+                levensduur +
+                " jaar oud zal worden."
+            );
+        }
+
+        berekenHoeveelheid();
+    </script>
+</body>
+
+</html>

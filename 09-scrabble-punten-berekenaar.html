@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var alfabet = [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T",
+            "U",
+            "V",
+            "W",
+            "X",
+            "Y",
+            "Z"
+        ];
+        var alfabetScore = [
+            1,
+            3,
+            3,
+            2,
+            1,
+            4,
+            2,
+            4,
+            1,
+            8,
+            5,
+            1,
+            3,
+            1,
+            1,
+            3,
+            10,
+            1,
+            1,
+            1,
+            1,
+            4,
+            4,
+            8,
+            4,
+            10
+        ];
+
+        document.write("<h1>Scrabble punten berekenaar</h1>");
+        var woord = prompt("Van welk woord wil je de score weten?");
+        if (woord == null) {
+            document.write("<br/>U heeft geannuleerd.");
+        } else if (woord.length == 0) {
+            document.write("<br/>U heeft niet ingegeven.");
+        } else if (woord.indexOf(" ") != -1) {
+            document.write("<br/>U mag geen spaties gebruiken.");
+        } else {
+            var woordToUppercase = woord.toUpperCase();
+            var score = 0;
+            document.write("<p/>Het woord is: " + woord);
+            for (x = 0; x < woord.length; x++) {
+                var position = alfabet.indexOf(woordToUppercase.charAt(x));
+                var waarde = alfabetScore[position];
+                console.log(position);
+                score = waarde + score;
+                document.write("<p/>" + woordToUppercase.charAt(x) + " - " + waarde);
+            }
+            document.write("<p/>Totaal: " + score + " punten");
+        }
+    </script>
+</body>
+
+</html>

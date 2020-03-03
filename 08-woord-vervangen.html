@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="form">
+        <p>Zin:</p>
+        <input type="text" name="tekst" size="100" />
+        <p /> Zoek dit woord: <input type="text" name="zoek" />
+        <p /> Dit woord komt in de plaats: <input type="text" name="nieuw" />
+        <p />
+        <input type="button" name="button" value="vervang" onclick="vervangWoord(document.form.tekst.value,document.form.zoek.value,document.form.nieuw.value);" />
+        <p>De nieuwe zin:</p>
+        <input type="text" id="result" size="100" />
+    </form>
+    <script>
+        function vervangWoord(tekst, zoek, nieuw) {
+            if (tekst.indexOf(zoek) == -1) {
+                tekst = "Dat woord vind ik niet!";
+                document.getElementById("result").value = tekst;
+            } else if (tekst.indexOf(zoek) != -1) {
+                deel1 = tekst.substring(0, tekst.indexOf(zoek)) + nieuw;
+                deel2 = tekst.substring(
+                    tekst.indexOf(zoek) + zoek.length,
+                    tekst.length
+                );
+                tekst = deel1 + deel2;
+                document.getElementById("result").value = tekst;
+            }
+        }
+    </script>
+</body>
+
+</html>

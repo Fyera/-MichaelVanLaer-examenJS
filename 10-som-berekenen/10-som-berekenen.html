@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="10-som-berekenen.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Getallen berekenen</h1>
+    <p>
+        Geef een getal op in het onderstaande veld en kies "Voeg toe". Je kan meerdere getallen toevoegen. Als je gedaan
+        hebt, kies je "bereken".
+    </p>
+    <form name="form">
+        <p>
+            Getal:
+            <input type="text" id="input" name="getal" />
+            <input type="button" name="button" value="Voeg toe " onclick="voegToe(document.getElementById('input').value),document.getElementById('result').value=allegetallen;document.getElementById('input').value =
+            ''" />
+            <input type="button" id="bereken" name="button" value="Bereken"
+                onclick="berekenMij(getallen),document.getElementById('result').value =berekenMij(getallen);" />
+        </p>
+        <h3>Berekening</h3>
+        <input type="text" id="result" size="100" value=" " />
+    </form>
+</body>
+
+</html>

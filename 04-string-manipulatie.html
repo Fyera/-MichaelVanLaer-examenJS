@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*Maak een nieuwe var en steek het 5e karakter van de filename var erin.Resultaat (let op de quotes):Het zesde karakter (volgens mensen) in 'javascriptframework' is: 'c'.*/
+
+        var voornaam = "Danny";
+        var achternaam = "Drijvers";
+        var naam = voornaam + " " + achternaam;
+        document.write("<p/>Hallo " + naam + ".");
+        var lengteNaam = voornaam.length + achternaam.length;
+        document.write("<p/>Jouw naam bevat " + lengteNaam + " karakters.");
+        var filename = "javaScriptFrameWork";
+        document.write('<p/>De orginele filename is: "' + filename + '".');
+        var filenameLowerCase = filename.toLowerCase();
+        document.write(
+            '<p/>De filename kan beter in kleine letters getypt worden, dus: "' +
+            filenameLowerCase +
+            '".'
+        );
+        var sub1 = filenameLowerCase.substring(0, 10);
+        var sub2 = filenameLowerCase.substring(10, filename.length);
+        document.write(
+            '<p/>Als je "' +
+            filenameLowerCase +
+            '" opsplitst, krijg je : "' +
+            sub1 +
+            '" en "' +
+            sub2 +
+            '".'
+        );
+        var vijfdeKarakter = filenameLowerCase[5];
+        document.write(
+            '<p/>Het zesde karakter (volgens mensen) in "' +
+            filenameLowerCase +
+            '" is: "' +
+            vijfdeKarakter +
+            '".'
+        );
+    </script>
+</body>
+
+</html>
